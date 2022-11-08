@@ -1,23 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
 
 /**
-  * main - print the name of the program
-  * @argc: counts the arguement
-  * @argv: arguement
-  * Return: Always 0 (success)
+  * main - print the multiplication of two integers
+  * @argc: arguement count
+  * @argv: arguement vector
+  * Return: 0 if true, 1 if false
   */
 int main(int argc, char *argv[])
 {
-	int count = 0;
+	int a, b;
 
-	if (argc > 0)
+	if (argc == 3)
 	{
-		while (count < argc)
-		{
-			printf("%s\n", argv[count]);
-			count++;
-		}
+		a = atoi(argv[1]);
+		b = atoi(argv[2]);
+		printf("%d\n", a *b);
+		return (0);
 	}
+	printf("Error\n");
 	return (0);
 }
